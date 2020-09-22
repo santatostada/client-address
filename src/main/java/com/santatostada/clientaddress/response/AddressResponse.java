@@ -8,10 +8,10 @@ import lombok.Setter;
 public class AddressResponse {
     private int id;
 
-    private String address;
+    private String name;
 
-    public AddressResponse(int id, String address) {
+    public AddressResponse(int id, String name) {
         this.id = id;
-        this.address = address;
+        this.name = name;
     }
 }

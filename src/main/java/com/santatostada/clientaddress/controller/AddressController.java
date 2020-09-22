@@ -40,9 +40,9 @@ public class AddressController {
 
     @RequestMapping("/addAddress")
     public void addAddress(@RequestParam(name="clientId") int clientId,
-                           @RequestParam(name="address") String address){
+                           @RequestParam(name="name") String name){
         Client client = clientService.getClientById(clientId);
-        Address clientAddress = new Address(address, client);
+        Address clientAddress = new Address(name, client);
         addressService.addAddress(clientAddress);
     }
 }

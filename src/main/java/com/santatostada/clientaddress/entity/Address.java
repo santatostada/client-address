@@ -16,7 +16,7 @@ public class Address {
     private int id;
 
     @Column
-    private String address;
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
@@ -25,8 +25,8 @@ public class Address {
     public Address() {
     }
 
-    public Address(String address, Client client){
-        this.address = address;
+    public Address(String name, Client client){
+        this.name = name;
         this.client = client;
     }
 }
